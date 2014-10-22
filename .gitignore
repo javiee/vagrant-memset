@@ -1,0 +1,10 @@
+.rspec
+*.iml
+*.gem
+*.rbc
+.bundle
+.config
+.vagrant
+.yardoc
+Gemfile.lock
+InstalledFiles
