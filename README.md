@@ -6,10 +6,18 @@ This plugin adds [Vagrant](http://www.vagrantup.com)  compatibility for [Memset 
 * Cancel instances.
 * Authentication via SSH.
 * Support for sync folders 
-* Provisioning built-in vagrant provisioners. 
+* Provisioning via built-in vagrant provisioners.
+
+This plugin is based on existing Provider plugins
 
 ## Installation
 
+* Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
+```
+vagrant plugin install vagrant-memset
+vagrant up --provider=memset
+```
+Installing vagrant-memset requires "make" package installed.
 
 ## Configuration
 
@@ -18,7 +26,6 @@ This plugin adds [Vagrant](http://www.vagrantup.com)  compatibility for [Memset 
 * `api_key` (String) - API key for accessing Memset. It requires access  server.info, create.hourly_minisever,job.status,service.cancel methods. 
 * `sku` - The SKU of the service  to be provisioned.
 * `os` (String) - The Operating System. Only linux.
-* `discount_code` (String) - Promotional discount.
 * `vlan` (String) - Vlan name to join in when the server is created.
 * `dry_run` - If True, then the service is not provisioned but the information is still returned.
 
@@ -36,7 +43,6 @@ Vagrant.configure("2") do |config|
     	mem.sku   = "MS0025"
     	mem.os    = "debian_wheezy_64"
 		mem.vlan = "caroraa-vlan1"
-    	mem.discount_code = "asdfaspu"
 	end
   end
 ```
@@ -47,7 +53,7 @@ Config line example:
 ```
 config.ssh.private_key_path = "~/ssh-keys/vagrant"
 ```
-The plugin will install in the server public key located in "~/ssh-keys/vagrant.pub"
+The SSH public key "~/ssh-keys/vagrant.pub" will be installed in the new instance
 ## Sync folders 
 
 Memset plugins offer minimal supports for sync folders. It requires sudo package installed so distributions where this is not shipped by default will need manual install before running "vagrant provision" command. 
@@ -57,5 +63,6 @@ config.vm.synced_folder "./provision", "/memset/vagrant-provision"
 ```
 ## Contributing
 
-Please send bugs to javier@memset.com
+Please create a pull [request](https://github.com/javiee/vagrant-memset/pulls) 
+Bugs and support email to javier@memset.com.
 
