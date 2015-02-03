@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
 		mem.api_key  = "apikeystring"                 
     	mem.sku   = "MS0025"
     	mem.os    = "debian_wheezy_64"
-		mem.vlan = "caroraa-vlan1"
+		mem.vlan = "example-vlan1"
 	end
   end
 ```
