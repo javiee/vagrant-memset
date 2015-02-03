@@ -1,3 +1,10 @@
 VERSION 14/10/2014
 
 	* First public release
+
+VERSION 03/02/2015
+
+	* Copyright year
+	* Vagrant file example updated
+	* Spelling corrected
+

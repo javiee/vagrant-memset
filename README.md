@@ -24,7 +24,7 @@ Installing vagrant-memset requires "make" package to be installed.
 
  Parameters supported by  Vagrant Memset Provider:
 
-* `api_key` (String) - API key for accessing Memset. It requires access  server.info, create.hourly_minisever,job.status,service.cancel methods. 
+* `api_key` (String) - API key for accessing Memset. It requires access  server.info, create.hourly_minisever, job.status and service.cancel methods. 
 * `sku` - The SKU of the service  to be provisioned.
 * `os` (String) - The Operating System only Linux.
 * `vlan` (String) - VLAN name to join in when the server is created.
